@@ -8,5 +8,14 @@ Installation
 1. Edit `TO4cfg.ini` to your needs.
 2. Run:
 ```
+docker-compose up -d --build
+```
+
+Update
+---
+
+1. Run:
+```
 docker-compose up -d --build --force-recreate
 ```
+
