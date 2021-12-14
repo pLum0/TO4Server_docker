@@ -4,9 +4,14 @@ services:
   to4:
     build: ./build
     restart: always
+    user: "to4:to4"
     ports:
       - 7777:7777/udp
       - 7778:7778/udp
       - 27015:27015/udp
     volumes:
       - ./TO4cfg.ini:/home/to4/TO4Server/TO4cfg.ini
+      - config_save:/home/to4/TO4Server/TO/Saved/Config/LinuxServer
+
+volumes:
+    config_save:
